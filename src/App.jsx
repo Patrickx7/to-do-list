@@ -15,6 +15,7 @@ function App() {
     const novaTarefa = { id: Date.now(), titulo: titulo.trim(), criadaEm: new Date().toLocaleString('pt-BR') }
     setTarefas([...tarefas, novaTarefa])
     setTitulo('')
+    setErro('')
 
   }
 
@@ -33,6 +34,7 @@ function App() {
       <button onClick={adicionarTarefa}>Adicionar</button>
       <p>{titulo.length}/100</p>
       {tarefas.length === 0 && <p>Nenhuma tarefa</p>}
+      {erro.length !== 0 && <p>{erro}</p>}
 
 
       <ul>
