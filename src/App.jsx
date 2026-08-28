@@ -29,10 +29,12 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Lista de tarefas</h1>
-      <input maxLength={100} value={titulo} onChange={(e) => setTitulo(e.target.value)} type="text" placeholder="Nova tarefa..." />
-      <button onClick={adicionarTarefa}>Adicionar</button>
+        <div className="form">
+          <input maxLength={100} value={titulo} onChange={(e) => setTitulo(e.target.value)} type="text" placeholder="Nova tarefa..." />
+          <button onClick={adicionarTarefa}>Adicionar</button>
+        </div>
       <p>{titulo.length}/100</p>
       {tarefas.length === 0 && <p>Nenhuma tarefa</p>}
       {erro.length !== 0 && <p>{erro}</p>}
