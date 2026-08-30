@@ -42,9 +42,12 @@ function App() {
       <ul>
         {tarefas.map(tarefa => (
           <li key={tarefa.id}>
-            <span className="tituloTarefa">{tarefa.titulo}</span>
-            <span className="criadaEm">{tarefa.criadaEm}</span>
+            <div className="tituloData">
+              <span className="tituloTarefa">{tarefa.titulo}</span>
+              <span className="criadaEm">{tarefa.criadaEm}</span>
+            </div>
             <button onClick={() => excluirTarefa(tarefa.id)}>X</button>
+            
           </li>
         ))}
       </ul>

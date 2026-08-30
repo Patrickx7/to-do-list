@@ -58,3 +58,10 @@
 .tituloTarefa {
   min-width: 0
 }
+
+.tituloData {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-break: break-word;
+}
