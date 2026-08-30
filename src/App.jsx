@@ -1,11 +1,15 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import './App.css'
 
 function App() {
 
   const [titulo, setTitulo] = useState('')
-  const [tarefas, setTarefas] = useState([])
+  const [tarefas, setTarefas] = useState(JSON.parse(localStorage.getItem('tarefas')) || [])
   const [erro, setErro] = useState('')
+
+  useEffect(() => {
+    localStorage.setItem('tarefas', JSON.stringify(tarefas))
+  }, [tarefas])
 
   function adicionarTarefa() {
     if (titulo.trim() === '') {
