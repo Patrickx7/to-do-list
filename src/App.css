@@ -25,3 +25,26 @@
   border-radius: 6px;
   cursor: pointer;
 }
+
+.container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.container li button {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  margin-left: auto;
+}
