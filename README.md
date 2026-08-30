@@ -1,16 +1,38 @@
-# React + Vite
+# Lista de Tarefas (To-Do)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicação de lista de tarefas desenvolvida em React.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Adicionar tarefa com título
+- Exibe data e horário de criação de cada tarefa
+- Excluir tarefas com confirmação antes da exclusão
+- Não é possível adicionar tarefas em branco
+- Limitado a 100 caracteres por tarefa
+- Mensagem exibida quando não há nenhuma tarefa na lista
+- Interface responsiva
 
-## React Compiler
+## Como Rodar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+git clone https://github.com/Patrickx7/to-do-list.git
+cd to-do-list
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+## Tecnologias
+- React
+- Vite
+- JavaScript
+- CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Decisões Técnicas 
+
+Nessa aplicação foi usado o useState, pois ele funciona como um mensageiro para o react, toda vez que é adicionado uma nova tarefa, ele manda uma "mensagem" ao react para se comunicar com o navegador e redesenhar as informações novas.
+
+Vite foi utilizado para montar o projeto e rodar localmente
+
+Utilizei JavaScript e CSS pois essas tecnologias estou mais familiarizado em meu dia a dia e isso facilitou para a conclusão do projeto.
+
+O redux não foi utilizado pois traria mais complexidade ao sistema, pois ele é necessário quando é utilizado várias páginas, e como, utilizamos somente uma, não foi necessário o uso dessa tecnologia.
