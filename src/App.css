@@ -48,3 +48,8 @@
   cursor: pointer;
   margin-left: auto;
 }
+
+.criadaEm {
+  font-size: 13px;
+  color: #888;
+}
