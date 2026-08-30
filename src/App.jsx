@@ -41,8 +41,8 @@ function App() {
       </div>
 
         {titulo.length !== 0 && <p>{titulo.length}/100</p>}
-        {tarefas.length === 0 && <p>Nenhuma tarefa</p>}
         {erro.length !== 0 && <p>{erro}</p>}
+        {tarefas.length === 0 && <p>Nenhuma tarefa</p>}
       <ul>
         {tarefas.map(tarefa => (
           <li key={tarefa.id}>
