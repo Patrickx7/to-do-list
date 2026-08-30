@@ -65,3 +65,9 @@
   min-width: 0;
   word-break: break-word;
 }
+
+@media (max-width: 480px) {
+  .form {
+    flex-direction: column;
+  }
+}
