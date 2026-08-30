@@ -11,6 +11,7 @@ Aplicação de lista de tarefas desenvolvida em React.
 - Limitado a 100 caracteres por tarefa
 - Mensagem exibida quando não há nenhuma tarefa na lista
 - Interface responsiva
+- Tarefas ficam salvas no navegador e permanecem ao recarregar a página
 
 ## Como Rodar
 
@@ -36,3 +37,5 @@ Vite foi utilizado para montar o projeto e rodar localmente
 Utilizei JavaScript e CSS pois essas tecnologias estou mais familiarizado em meu dia a dia e isso facilitou para a conclusão do projeto.
 
 O redux não foi utilizado pois traria mais complexidade ao sistema, pois ele é necessário quando é utilizado várias páginas, e como, utilizamos somente uma, não foi necessário o uso dessa tecnologia.
+
+Também foi adicionado o useEffect para trabalhar em conjunto com o localStorage, useEffect diz sempre quando uma lista de tarefas é modificada e o localstorage salva isso.
