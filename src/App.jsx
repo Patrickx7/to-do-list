@@ -5,7 +5,7 @@ function App() {
 
   const [titulo, setTitulo] = useState('')
   const [tarefas, setTarefas] = useState([])
-  const [erro, setErro] = useState ('')
+  const [erro, setErro] = useState('')
 
   function adicionarTarefa() {
     if (titulo.trim() === '') {
@@ -31,19 +31,18 @@ function App() {
   return (
     <div className="container">
       <h1>Lista de tarefas</h1>
-        <div className="form">
-          <input maxLength={100} value={titulo} onChange={(e) => setTitulo(e.target.value)} type="text" placeholder="Nova tarefa..." />
-          <button onClick={adicionarTarefa}>Adicionar</button>
-        </div>
-      <p>{titulo.length}/100</p>
-      {tarefas.length === 0 && <p>Nenhuma tarefa</p>}
-      {erro.length !== 0 && <p>{erro}</p>}
+      <div className="form">
+        <input maxLength={100} value={titulo} onChange={(e) => setTitulo(e.target.value)} type="text" placeholder="Nova tarefa..." />
+        <button onClick={adicionarTarefa}>Adicionar</button>
+      </div>
 
-
+        {titulo.length !== 0 && <p>{titulo.length}/100</p>}
+        {tarefas.length === 0 && <p>Nenhuma tarefa</p>}
+        {erro.length !== 0 && <p>{erro}</p>}
       <ul>
         {tarefas.map(tarefa => (
           <li key={tarefa.id}>
-            <span>{tarefa.titulo}</span>
+            <span className="tituloTarefa">{tarefa.titulo}</span>
             <span className="criadaEm">{tarefa.criadaEm}</span>
             <button onClick={() => excluirTarefa(tarefa.id)}>X</button>
           </li>
@@ -53,6 +52,4 @@ function App() {
   )
 }
 
-export default App
-
-
+  export default App

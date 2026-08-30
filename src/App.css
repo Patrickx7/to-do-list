@@ -39,6 +39,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   margin-bottom: 8px;
+  word-break: break-word
 }
 
 .container li button {
@@ -52,4 +53,8 @@
 .criadaEm {
   font-size: 13px;
   color: #888;
+}
+
+.tituloTarefa {
+  min-width: 0
 }
